@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./index.module.css";
+import { formatDate } from "@/app/_libs/utils";
 
 type Props = {
   date: string;
@@ -17,7 +18,7 @@ export default function Date({ date }: Props) {
         loading="eager"
         priority
       />
-      {date}
+      {formatDate(date)}
     </span>
   );
 }
